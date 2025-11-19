@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kelompok 1 - Kalkulus Proposisi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="glow-bg"></div>
+    <header class="site-hero">
+      <div class="hero-content">
+        <p class="eyebrow">Toolbox Kalkulus Proposisi</p>
+        <h1>
+          Pusat Eksperimen <span> Logika Proposisi</span>
+        </h1>
+        <p class="lead">
+          Platform interaktif untuk membangun, menganalisis, dan memvalidasi 
+          proposisi secara sistematis. dirancang dengan antarmuka modern yang 
+          jernih dan fokus pada presisi.
+        </p>
+        <div class="hero-actions">
+          <button class="primary">Mulai Eksperimen</button>
+          <button class="ghost">Baca Panduan</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="cards-grid">
+        <!-- Truth Table Generator -->
+        <article class="logic-card" id="truth-card">
+          <div class="card-header">
+            <p class="tag">Fitur 01</p>
+            <h2>Generator Tabel Kebenaran</h2>
+            <p>
+              Susun proposisi via keypad operator dan hasilkan tabel kebenaran
+              lengkap dengan highlight elegan nan Kecehhh.
+            </p>
+          </div>
+          <div class="composer" data-target="truth-expression">
+            <div class="display" id="truth-expression">⋯</div>
+            <div class="controls">
+              <button data-action="undo">⌫</button>
+              <button data-action="clear">Reset</button>
+            </div>
+          </div>
+          <div class="keypad" data-target="truth-expression">
+            <button data-value="p">p</button>
+            <button data-value="q">q</button>
+            <button data-value="r">r</button>
+            <button data-value="s">s</button>
+            <button data-value="¬">¬</button>
+            <button data-value="∧">∧</button>
+            <button data-value="∨">∨</button>
+            <button data-value="→">→</button>
+            <button data-value="↔">↔</button>
+            <button data-value="(">(</button>
+            <button data-value=")">)</button>
+          </div>
+          <button class="primary wide" id="generate-table">
+            Generate Table
+          </button>
+          <div class="output" id="truth-output">
+            <p class="placeholder">
+              Tabel kebenaran akan muncul di sini setelah kamu generate.
+            </p>
+          </div>
+        </article>
+
+        <!-- Propositional Evaluator -->
+        <article class="logic-card" id="evaluate-card">
+          <div class="card-header">
+            <p class="tag">Fitur 02</p>
+            <h2>EvaluatorProposisi</h2>
+            <p>Pilih nilai variabel, susun proposisi, dan lihat step evaluasi.</p>
+          </div>
+          <div class="variable-grid" id="variable-grid">
+            <div class="variable-toggle" data-var="p">
+              <span>p</span>
+              <button class="toggle" data-value="true">True</button>
+              <button class="toggle inactive" data-value="false">False</button>
+            </div>
+            <div class="variable-toggle" data-var="q">
+              <span>q</span>
+              <button class="toggle" data-value="true">True</button>
+              <button class="toggle inactive" data-value="false">False</button>
+            </div>
+            <div class="variable-toggle" data-var="r">
+              <span>r</span>
+              <button class="toggle" data-value="true">True</button>
+              <button class="toggle inactive" data-value="false">False</button>
+            </div>
+            <div class="variable-toggle" data-var="s">
+              <span>s</span>
+              <button class="toggle" data-value="true">True</button>
+              <button class="toggle inactive" data-value="false">False</button>
+            </div>
+          </div>
+          <div class="composer" data-target="eval-expression">
+            <div class="display" id="eval-expression">⋯</div>
+            <div class="controls">
+              <button data-action="undo">⌫</button>
+              <button data-action="clear">Reset</button>
+            </div>
+          </div>
+          <div class="keypad" data-target="eval-expression">
+            <button data-value="p">p</button>
+            <button data-value="q">q</button>
+            <button data-value="r">r</button>
+            <button data-value="s">s</button>
+            <button data-value="¬">¬</button>
+            <button data-value="∧">∧</button>
+            <button data-value="∨">∨</button>
+            <button data-value="→">→</button>
+            <button data-value="↔">↔</button>
+            <button data-value="(">(</button>
+            <button data-value=")">)</button>
+          </div>
+          <button class="primary wide" id="evaluate-prop">Evaluate</button>
+          <div class="output" id="evaluate-output">
+            <p class="placeholder">Hasil evaluasi akan tampil di sini.</p>
+          </div>
+        </article>
+
+        <!-- Negation Generator -->
+        <article class="logic-card" id="negation-card">
+          <div class="card-header">
+            <p class="tag">Fitur 03</p>
+            <h2>Generator Negasi</h2>
+            <p>Bangun negasi formal, versi sederhana, dan interpretasi alami.</p>
+          </div>
+          <div class="composer" data-target="neg-expression">
+            <div class="display" id="neg-expression">⋯</div>
+            <div class="controls">
+              <button data-action="undo">⌫</button>
+              <button data-action="clear">Reset</button>
+            </div>
+          </div>
+          <div class="keypad" data-target="neg-expression">
+            <button data-value="p">p</button>
+            <button data-value="q">q</button>
+            <button data-value="r">r</button>
+            <button data-value="s">s</button>
+            <button data-value="¬">¬</button>
+            <button data-value="∧">∧</button>
+            <button data-value="∨">∨</button>
+            <button data-value="→">→</button>
+            <button data-value="↔">↔</button>
+            <button data-value="(">(</button>
+            <button data-value=")">)</button>
+          </div>
+          <button class="primary wide" id="generate-negation">
+            Generate Negation
+          </button>
+          <div class="output" id="negation-output">
+            <p class="placeholder">Negasi akan muncul dengan animasi halus.</p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>Dibuat oleh Kelompok 1 - Logika Informatika - Kalkulus Proposisi © 2025</p>
+    </footer>
+
+    <script src="logic.js" type="module"></script>
+  </body>
+</html>
+
